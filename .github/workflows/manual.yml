@@ -18,12 +18,14 @@ jobs:
 
     steps:
       - name: Checkout repository and submodules
+
         uses: actions/checkout@v3
         with:
           submodules: recursive
 
       - name: Install Driver
         run: |
+          ls -a
           sudo apt update
           sudo ./install_driver.sh 1
           sudo ./install_driver.sh 2
