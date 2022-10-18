@@ -56,7 +56,4 @@ echo ""
 sudo apt remove -y libcamera0
 sudo dpkg -i ../libcamera-bins/libcamera-dev-0.0.9-bullseye-armhf.deb
 
-
-esac
-
         
