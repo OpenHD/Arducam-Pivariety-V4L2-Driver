@@ -2,19 +2,19 @@
 
 CHROOT=$1
 
-if [[ $CHROOT == 1 ]]
+if [[ $CHROOT == "1" ]]
 then
     uname="5.15.61-v7+"
-elif [[ $CHROOT == 2 ]]
+elif [[ $CHROOT == "2" ]]
 then
     uname="5.15.61-v7l+"
-elif [[ $CHROOT == 2 ]]
+elif [[ $CHROOT == "2" ]]
 then
     uname="5.15.61-v8+"
-elif [[ $CHROOT == 3 ]]
+elif [[ $CHROOT == "3" ]]
 then
     uname="5.15.61+"
-elif [[ $CHROOT == 0 ]]
+elif [[ $CHROOT == "0" ]]
 then
     uname=$(uname -r)
 fi
