@@ -26,6 +26,7 @@ jobs:
       - name: Install Driver
         run: |
           ls -a
+          cd Release
           sudo apt update
           sudo ./install_driver.sh 1
           sudo ./install_driver.sh 2
