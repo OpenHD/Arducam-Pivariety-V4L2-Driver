@@ -30,10 +30,11 @@ jobs:
         base_image: raspios_lite:latest
         image_additional_mb: 4000
         copy_repository_path: /opt
-        copy_artifact_path: Open.HD
+        copy_artifact_path: Arducam
         import_github_env: true
         commands: |
           ls -a
+          cd Arducam
           cd Release
           sudo apt update
           sudo ./install_driver.sh 1
