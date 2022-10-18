@@ -50,10 +50,12 @@ awk 'BEGIN{ count=0 }       \
     }                       \
 }' /boot/config.txt
 
-wget -O install_pivariety_pkgs.sh https://github.com/ArduCAM/Arducam-Pivariety-V4L2-Driver/releases/download/install_script/install_pivariety_pkgs.sh
-chmod +x install_pivariety_pkgs.sh
-./install_pivariety_pkgs.sh -p libcamera_dev
-./install_pivariety_pkgs.sh -p libcamera_apps
+#Install new Libcamera
+echo -e "remove libcamera0"
+echo ""
+sudo apt remove -y libcamera0
+sudo dpkg -i ../libcamera-bins/libcamera-dev-0.0.9-bullseye-armhf.deb
+
 
 esac
 
