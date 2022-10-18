@@ -28,7 +28,4 @@ jobs:
           cd Arducam-Pivariety-V4L2-Driver
           cd Release
           sudo apt update
-          sudo ./install_driver.sh 1
-          sudo ./install_driver.sh 2
-          sudo ./install_driver.sh 3
-          sudo ./install_driver.sh 0
+          sudo ./install_driver.sh
