@@ -1,16 +1,16 @@
 #!/bin/bash
 
     uname="5.15.61-v7+"
-    install_drivers();
+    install_drivers()
 
     uname="5.15.61-v7l+"
-    install_drivers();
+    install_drivers()
 
     uname="5.15.61-v8+"
-    install_drivers();
+    install_drivers()
 
     uname="5.15.61+"
-    install_drivers();
+    install_drivers()
 
     #uname=$(uname -r)
     #install_drivers();
