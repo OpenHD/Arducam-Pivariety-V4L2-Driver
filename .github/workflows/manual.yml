@@ -33,7 +33,7 @@ jobs:
         copy_artifact_path: Open.HD
         import_github_env: true
         commands: |
-            ls -a
+          ls -a
           cd Release
           sudo apt update
           sudo ./install_driver.sh 1
