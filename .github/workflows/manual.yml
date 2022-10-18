@@ -21,7 +21,7 @@ jobs:
         base_image: raspios_lite:latest
         image_additional_mb: 4000
         copy_repository_path: /opt
-        copy_artifact_path: Arducam
+        copy_artifact_path: Arducam-Pivariety-V4L2-Driver
         import_github_env: true
         commands: |
           ls -a
