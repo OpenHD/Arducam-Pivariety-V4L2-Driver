@@ -1,14 +1,33 @@
 #!/bin/bash
+
+CHROOT=$1
+
+if [[ $CHROOT == 1 ]]
+then
+    uname="5.15.61-v7+"
+elif [[ $CHROOT == 2 ]]
+then
+    uname="5.15.61-v7l+"
+elif [[ $CHROOT == 2 ]]
+then
+    uname="5.15.61-v8+"
+elif [[ $CHROOT == 3 ]]
+then
+    uname="5.15.61+"
+elif [[ $CHROOT == 0 ]]
+then
+    uname=$(uname -r)
+fi
+
 echo "Installing Arducam-Pivariety-V4L2-Driver..."
 echo "--------------------------------------"
 sudo install -p -m 755 ./arducam_camera_selector.sh /usr/bin/
-sudo install -p -m 644 ./bin/$(uname -r)/arducam.ko  /lib/modules/$(uname -r)/kernel/drivers/media/i2c/
-sudo install -p -m 644 ./bin/$(uname -r)/arducam.dtbo /boot/overlays/
-uname=$(uname -r)
+sudo install -p -m 644 ./bin/$uname/arducam.ko  /lib/modules/$uname/kernel/drivers/media/i2c/
+sudo install -p -m 644 ./bin/$uname/arducam.dtbo /boot/overlays/
 sudo install -p -m 644 ./bin/$uname/imx519.ko /lib/modules/$uname/kernel/drivers/media/i2c/
 sudo install -p -m 644 ./bin/$uname/ak7375.ko /lib/modules/$uname/kernel/drivers/media/i2c/ 
 sudo install -p -m 644 ./bin/$uname/imx519.dtbo /boot/overlays/
-sudo /sbin/depmod -a $(uname -r)
+sudo /sbin/depmod -a $uname
 awk 'BEGIN{ count=0 }       \
 {                           \
     if($1 == "dtoverlay=arducam-pivariety"){       \
