@@ -37,17 +37,6 @@ awk 'BEGIN{ count=0 }       \
     }                       \
 }' /boot/config.txt
 
-awk 'BEGIN{ count=0 }       \
-{                           \
-    if($1 == "dtoverlay=imx519"){       \
-        count++;            \
-    }                       \
-}END{                       \
-    if(count <= 0){         \
-        system("sudo sh -c '\''echo dtoverlay=imx519 >> /boot/config.txt'\''"); \
-    }                       \
-}' /boot/config.txt
-
 #Install new Libcamera
 echo -e "remove libcamera0"
 echo ""
