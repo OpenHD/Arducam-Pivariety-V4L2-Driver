@@ -1,21 +1,21 @@
 #!/bin/bash
 
-    uname="5.15.61-v7+"
-    install_drivers()
+uname="5.15.61-v7+"
+install_drivers
 
-    uname="5.15.61-v7l+"
-    install_drivers()
+uname="5.15.61-v7l+"
+install_drivers
 
-    uname="5.15.61-v8+"
-    install_drivers()
+uname="5.15.61-v8+"
+install_drivers
 
-    uname="5.15.61+"
-    install_drivers()
+uname="5.15.61+"
+install_drivers
 
     #uname=$(uname -r)
     #install_drivers();
 
-function install_drivers{
+install_drivers() {
 echo "Installing Arducam-Pivariety-V4L2-Driver..."
 echo "--------------------------------------"
 sudo install -p -m 755 ./arducam_camera_selector.sh /usr/bin/
