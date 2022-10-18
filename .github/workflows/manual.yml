@@ -34,7 +34,7 @@ jobs:
         import_github_env: true
         commands: |
           ls -a
-          cd Arducam
+          cd Arducam-Pivariety-V4L2-Driver
           cd Release
           sudo apt update
           sudo ./install_driver.sh 1
