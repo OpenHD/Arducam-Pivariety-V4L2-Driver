@@ -44,8 +44,8 @@ awk 'BEGIN{ count=0 }       \
 echo -e "remove libcamera0"
 echo ""
 sudo apt remove -y libcamera0
-sudo apt install -y ../libcamera-bins/libcamera-dev-0.0.9-bullseye-armhf.deb
-sudo apt install -y ../libcamera-bins/libcamera-apps-0.0.9-bullseye-armhf.deb
+sudo apt install -y ../libcamera-bins/libcamera-dev-0.0.10-bullseye-armhf.deb
+sudo apt install -y ../libcamera-bins/libcamera-apps-0.0.10-bullseye-armhf.deb
 
 
         
