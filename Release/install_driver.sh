@@ -13,16 +13,16 @@ sudo install -p -m 644 ./bin/$uname/imx519.dtbo /boot/overlays/
 sudo /sbin/depmod -a $uname
 }
 
-uname="5.15.61-v7+"
+uname="5.15.74-v7+"
 install_drivers
 
-uname="5.15.61-v7l+"
+uname="5.15.74-v7l+"
 install_drivers
 
-uname="5.15.61-v8+"
+uname="5.15.74-v8+"
 install_drivers
 
-uname="5.15.61+"
+uname="5.15.74+"
 install_drivers
 
     #uname=$(uname -r)
